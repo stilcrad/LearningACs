@@ -30,14 +30,14 @@ USE_CUDA = True
 WRITE_IMGS_DEBUG = False
 
 AffNetPix = AffNetFast(PS = 32)
-weightd_fname = "/home/xxx/project/python/DKM-main/hesaffnet/pretrained/AffNet.pth"
+weightd_fname = "../weights/outdoor/Aff_res_shape.pth"
 checkpoint = torch.load(weightd_fname)
 AffNetPix.load_state_dict(checkpoint['state_dict'])
 AffNetPix.eval()
 
 # HardNetDescriptor = HardNet()
 # # model_weights = opt.bindir+'pretrained/HardNet++.pth'
-# model_weights = "/home/xxx/project/python/locate-master/hesaffnet/pretrained/HardNet++.pth"
+# model_weights = ""../weights/HardNet++.pth"
 # if USE_CUDA:
 #     hncheckpoint = torch.load(model_weights, map_location='cuda:0')
 # else:
